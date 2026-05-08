@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Token Usage Charts</title>
+<style>
+:root {
+  color-scheme: light;
+  --bg: #f6f8fa;
+  --surface: #ffffff;
+  --text: #1f2328;
+  --muted: #59636e;
+  --border: #d0d7de;
+  --accent: #0969da;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.5;
+}
+main {
+  width: min(960px, calc(100% - 32px));
+  margin: 40px auto;
+}
+header {
+  margin-bottom: 24px;
+}
+h1 {
+  margin: 0 0 8px;
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 1.1;
+  letter-spacing: 0;
+}
+p {
+  margin: 0;
+  color: var(--muted);
+}
+.chart-list {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+.chart-link {
+  display: block;
+  min-height: 132px;
+  padding: 20px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+  color: inherit;
+  text-decoration: none;
+  box-shadow: 0 8px 28px rgba(31, 35, 40, 0.06);
+}
+.chart-link:hover,
+.chart-link:focus-visible {
+  border-color: var(--accent);
+  outline: none;
+}
+.chart-title {
+  margin: 0 0 10px;
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+.chart-path {
+  color: var(--muted);
+  overflow-wrap: anywhere;
+}
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Token Usage Charts</h1>
+    <p>Public token usage visualizations generated from the current dataset.</p>
+  </header>
+  <section class="chart-list" aria-label="Charts">
+    <a class="chart-link" href="token_usage_weekly_normalized_chart.html">
+      <div class="chart-title">Weekly Normalized Token Usage Chart</div>
+      <div class="chart-path">token_usage_weekly_normalized_chart.html</div>
+    </a>
+    <a class="chart-link" href="token_usage_api_cost_chart.html">
+      <div class="chart-title">API Cost Estimate Visualization</div>
+      <div class="chart-path">token_usage_api_cost_chart.html</div>
+    </a>
+  </section>
+</main>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="1040" viewBox="0 0 1280 1040" role="img" aria-labelledby="title desc">
+<title id="title">API Cost Estimate Visualization</title>
+<desc id="desc">Charts showing cohort API cost estimates by model and scenario, GPT-5.4 cost components, and top users by estimated GPT-5.4 cost.</desc>
+<rect width="1280" height="1040" fill="#ffffff"/>
+<style>text{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Arial,sans-serif}</style>
+<text x="32.00" y="48.00" font-size="24" fill="#24292f" text-anchor="start" font-weight="700">API Cost Estimate Visualization</text>
+<text x="32.00" y="74.00" font-size="13" fill="#57606a" text-anchor="start" font-weight="400">Costs use OpenAI API text-token rates; cache reads are mapped to cached input tokens</text>
+<rect x="26.00" y="64.00" width="1228.00" height="338.00" rx="6" fill="#fbfbfb" stroke="#d0d7de"/>
+<text x="46.00" y="92.00" font-size="16" fill="#24292f" text-anchor="start" font-weight="700">Cohort Cost by Model and Scenario</text>
+<text x="1234.00" y="92.00" font-size="12" fill="#57606a" text-anchor="end" font-weight="400">USD</text>
+<line x1="176.00" y1="104.00" x2="176.00" y2="362.00" stroke="#d8dee4" stroke-width="1"/>
+<text x="176.00" y="384.00" font-size="11" fill="#57606a" text-anchor="middle" font-weight="400">$0</text>
+<line x1="356.38" y1="104.00" x2="356.38" y2="362.00" stroke="#d8dee4" stroke-width="1"/>
+<text x="356.38" y="384.00" font-size="11" fill="#57606a" text-anchor="middle" font-weight="400">$30.0k</text>
+<line x1="536.75" y1="104.00" x2="536.75" y2="362.00" stroke="#d8dee4" stroke-width="1"/>
+<text x="536.75" y="384.00" font-size="11" fill="#57606a" text-anchor="middle" font-weight="400">$60.0k</text>
+<line x1="717.12" y1="104.00" x2="717.12" y2="362.00" stroke="#d8dee4" stroke-width="1"/>
+<text x="717.12" y="384.00" font-size="11" fill="#57606a" text-anchor="middle" font-weight="400">$90.0k</text>
+<line x1="897.50" y1="104.00" x2="897.50" y2="362.00" stroke="#d8dee4" stroke-width="1"/>
+<text x="897.50" y="384.00" font-size="11" fill="#57606a" text-anchor="middle" font-weight="400">$120.0k</text>
+<line x1="1077.88" y1="104.00" x2="1077.88" y2="362.00" stroke="#d8dee4" stroke-width="1"/>
+<text x="1077.88" y="384.00" font-size="11" fill="#57606a" text-anchor="middle" font-weight="400">$150.0k</text>
+<line x1="176.00" y1="362.00" x2="1138.00" y2="362.00" stroke="#6e7781" stroke-width="1"/>
+<text x="158.00" y="148.00" font-size="13" fill="#24292f" text-anchor="end" font-weight="700">gpt-5.5</text>
+<rect x="176.00" y="112.00" width="138.03" height="18.00" rx="3" fill="#2f6f7e" stroke="none"/>
+<text x="322.03" y="125.00" font-size="11" fill="#24292f" text-anchor="start" font-weight="400">$22,956.42</text>
+<rect x="176.00" y="137.00" width="69.01" height="18.00" rx="3" fill="#6f42c1" stroke="none"/>
+<text x="253.01" y="150.00" font-size="11" fill="#24292f" text-anchor="start" font-weight="400">$11,478.21</text>
+<rect x="176.00" y="162.00" width="916.61" height="18.00" rx="3" fill="#bf5b17" stroke="none"/>
+<text x="1100.61" y="175.00" font-size="11" fill="#24292f" text-anchor="start" font-weight="400">$152,450.37</text>
+<text x="158.00" y="248.00" font-size="13" fill="#24292f" text-anchor="end" font-weight="700">gpt-5.4</text>
+<rect x="176.00" y="212.00" width="69.01" height="18.00" rx="3" fill="#2f6f7e" stroke="none"/>
+<text x="253.01" y="225.00" font-size="11" fill="#24292f" text-anchor="start" font-weight="400">$11,478.21</text>
+<rect x="176.00" y="237.00" width="34.51" height="18.00" rx="3" fill="#6f42c1" stroke="none"/>
+<text x="218.51" y="250.00" font-size="11" fill="#24292f" text-anchor="start" font-weight="400">$5,739.11</text>
+<rect x="176.00" y="262.00" width="458.30" height="18.00" rx="3" fill="#bf5b17" stroke="none"/>
+<text x="642.30" y="275.00" font-size="11" fill="#24292f" text-anchor="start" font-weight="400">$76,225.19</text>
+<text x="158.00" y="348.00" font-size="13" fill="#24292f" text-anchor="end" font-weight="700">gpt-5.4-mini</text>
+<rect x="176.00" y="312.00" width="20.70" height="18.00" rx="3" fill="#2f6f7e" stroke="none"/>
+<text x="204.70" y="325.00" font-size="11" fill="#24292f" text-anchor="start" font-weight="400">$3,443.46</text>
+<rect x="176.00" y="337.00" width="10.35" height="18.00" rx="3" fill="#6f42c1" stroke="none"/>
+<text x="194.35" y="350.00" font-size="11" fill="#24292f" text-anchor="start" font-weight="400">$1,721.73</text>
+<rect x="176.00" y="362.00" width="137.49" height="18.00" rx="3" fill="#bf5b17" stroke="none"/>
+<text x="321.49" y="375.00" font-size="11" fill="#24292f" text-anchor="start" font-weight="400">$22,867.56</text>
+<rect x="46.00" y="382.00" width="14.00" height="14.00" rx="2" fill="#2f6f7e" stroke="none"/>
+<text x="66.00" y="394.00" font-size="12" fill="#57606a" text-anchor="start" font-weight="400">Standard with cache</text>
+<rect x="236.00" y="382.00" width="14.00" height="14.00" rx="2" fill="#6f42c1" stroke="none"/>
+<text x="256.00" y="394.00" font-size="12" fill="#57606a" text-anchor="start" font-weight="400">Batch with cache</text>
+<rect x="426.00" y="382.00" width="14.00" height="14.00" rx="2" fill="#bf5b17" stroke="none"/>
+<text x="446.00" y="394.00" font-size="12" fill="#57606a" text-anchor="start" font-weight="400">No-cache equivalent</text>
+<rect x="26.00" y="460.00" width="1228.00" height="204.00" rx="6" fill="#fbfbfb" stroke="#d0d7de"/>
+<text x="46.00" y="488.00" font-size="16" fill="#24292f" text-anchor="start" font-weight="700">GPT-5.4 Standard Cost Breakdown</text>
+<rect x="176.00" y="530.00" width="246.84" height="42.00" rx="3" fill="#4c78a8" stroke="none"/>
+<text x="299.42" y="556.00" font-size="12" fill="#ffffff" text-anchor="middle" font-weight="700">Regular input $2.9k</text>
+<rect x="422.84" y="530.00" width="602.95" height="42.00" rx="3" fill="#54a24b" stroke="none"/>
+<text x="724.31" y="556.00" font-size="12" fill="#ffffff" text-anchor="middle" font-weight="700">Cached input $7.2k</text>
+<rect x="1025.79" y="530.00" width="112.21" height="42.00" rx="3" fill="#f58518" stroke="none"/>
+<text x="1081.89" y="556.00" font-size="12" fill="#ffffff" text-anchor="middle" font-weight="700">Output $1.3k</text>
+<text x="1138.00" y="518.00" font-size="13" fill="#24292f" text-anchor="end" font-weight="700">Total $11,478.21</text>
+<rect x="46.00" y="604.00" width="14.00" height="14.00" rx="2" fill="#4c78a8" stroke="none"/>
+<text x="66.00" y="616.00" font-size="12" fill="#57606a" text-anchor="start" font-weight="400">Regular input: $2,945.21</text>
+<rect x="306.00" y="604.00" width="14.00" height="14.00" rx="2" fill="#54a24b" stroke="none"/>
+<text x="326.00" y="616.00" font-size="12" fill="#57606a" text-anchor="start" font-weight="400">Cached input: $7,194.11</text>
+<rect x="566.00" y="604.00" width="14.00" height="14.00" rx="2" fill="#f58518" stroke="none"/>
+<text x="586.00" y="616.00" font-size="12" fill="#57606a" text-anchor="start" font-weight="400">Output: $1,338.90</text>
+<rect x="26.00" y="730.00" width="1228.00" height="228.00" rx="6" fill="#fbfbfb" stroke="#d0d7de"/>
+<text x="46.00" y="758.00" font-size="16" fill="#24292f" text-anchor="start" font-weight="700">Top Users by Estimated GPT-5.4 Standard Cost</text>
+<line x1="176.00" y1="770.00" x2="176.00" y2="926.00" stroke="#d8dee4" stroke-width="1"/>
+<text x="176.00" y="948.00" font-size="11" fill="#57606a" text-anchor="middle" font-weight="400">$0</text>
+<line x1="368.40" y1="770.00" x2="368.40" y2="926.00" stroke="#d8dee4" stroke-width="1"/>
+<text x="368.40" y="948.00" font-size="11" fill="#57606a" text-anchor="middle" font-weight="400">$500</text>
+<line x1="560.80" y1="770.00" x2="560.80" y2="926.00" stroke="#d8dee4" stroke-width="1"/>
+<text x="560.80" y="948.00" font-size="11" fill="#57606a" text-anchor="middle" font-weight="400">$1.0k</text>
+<line x1="753.20" y1="770.00" x2="753.20" y2="926.00" stroke="#d8dee4" stroke-width="1"/>
+<text x="753.20" y="948.00" font-size="11" fill="#57606a" text-anchor="middle" font-weight="400">$1.5k</text>
+<line x1="945.60" y1="770.00" x2="945.60" y2="926.00" stroke="#d8dee4" stroke-width="1"/>
+<text x="945.60" y="948.00" font-size="11" fill="#57606a" text-anchor="middle" font-weight="400">$2.0k</text>
+<line x1="1138.00" y1="770.00" x2="1138.00" y2="926.00" stroke="#d8dee4" stroke-width="1"/>
+<text x="1138.00" y="948.00" font-size="11" fill="#57606a" text-anchor="middle" font-weight="400">$2.5k</text>
+<line x1="176.00" y1="926.00" x2="1138.00" y2="926.00" stroke="#6e7781" stroke-width="1"/>
+<text x="158.00" y="794.00" font-size="12" fill="#24292f" text-anchor="end" font-weight="400">user_03</text>
+<rect x="176.00" y="778.00" width="885.25" height="22.00" rx="3" fill="#2f6f7e" stroke="none"/>
+<text x="1069.25" y="794.00" font-size="11" fill="#24292f" text-anchor="start" font-weight="400">$2,300.55</text>
+<text x="158.00" y="822.00" font-size="12" fill="#24292f" text-anchor="end" font-weight="400">user_09</text>
+<rect x="176.00" y="806.00" width="786.36" height="22.00" rx="3" fill="#2f6f7e" stroke="none"/>
+<text x="970.36" y="822.00" font-size="11" fill="#24292f" text-anchor="start" font-weight="400">$2,043.57</text>
+<text x="158.00" y="850.00" font-size="12" fill="#24292f" text-anchor="end" font-weight="400">user_07</text>
+<rect x="176.00" y="834.00" width="711.99" height="22.00" rx="3" fill="#2f6f7e" stroke="none"/>
+<text x="895.99" y="850.00" font-size="11" fill="#24292f" text-anchor="start" font-weight="400">$1,850.29</text>
+<text x="158.00" y="878.00" font-size="12" fill="#24292f" text-anchor="end" font-weight="400">user_10</text>
+<rect x="176.00" y="862.00" width="686.30" height="22.00" rx="3" fill="#2f6f7e" stroke="none"/>
+<text x="870.30" y="878.00" font-size="11" fill="#24292f" text-anchor="start" font-weight="400">$1,783.53</text>
+<text x="158.00" y="906.00" font-size="12" fill="#24292f" text-anchor="end" font-weight="400">user_05</text>
+<rect x="176.00" y="890.00" width="392.30" height="22.00" rx="3" fill="#2f6f7e" stroke="none"/>
+<text x="576.30" y="906.00" font-size="11" fill="#24292f" text-anchor="start" font-weight="400">$1,019.49</text>
+<text x="32.00" y="1016.00" font-size="11" fill="#57606a" text-anchor="start" font-weight="400">Source files: token_usage_api_cost_estimates.json and OpenAI API pricing page, generated 2026-05-08</text>
+</svg>
