@@ -1,0 +1,220 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="1380" viewBox="0 0 1280 1380" role="img" aria-labelledby="title desc">
+<title id="title">Token Usage Statistics Visualization</title>
+<desc id="desc">Charts showing cohort token usage statistics: KPI cards, token category breakdown on a log scale, top users by total tokens, top users by output tokens, and a per-user distribution box plot for all tokens.</desc>
+<rect width="1280" height="1380" fill="#ffffff"/>
+<style>text{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Arial,sans-serif}</style>
+
+<!-- Header -->
+<text x="32" y="48" font-size="24" fill="#24292f" font-weight="700">Token Usage Statistics</text>
+<text x="32" y="74" font-size="13" fill="#57606a" font-weight="400">13 anonymous users · 2026-01-29 to 2026-05-08 · 473 active user-days</text>
+
+<!-- KPI Cards -->
+<rect x="32" y="90" width="292" height="110" rx="6" fill="#fbfbfb" stroke="#d0d7de"/>
+<text x="48" y="116" font-size="11" fill="#57606a" font-weight="600" letter-spacing="0.5">USERS · ACTIVE DAYS</text>
+<text x="48" y="158" font-size="32" fill="#24292f" font-weight="700">13 · 473</text>
+<text x="48" y="184" font-size="12" fill="#57606a" font-weight="400">9 with reported messages, 4 silent</text>
+
+<rect x="340" y="90" width="292" height="110" rx="6" fill="#fbfbfb" stroke="#d0d7de"/>
+<text x="356" y="116" font-size="11" fill="#57606a" font-weight="600" letter-spacing="0.5">ALL TOKENS</text>
+<text x="356" y="158" font-size="32" fill="#24292f" font-weight="700">30.04B</text>
+<text x="356" y="184" font-size="12" fill="#57606a" font-weight="400">95.8% are cache reads</text>
+
+<rect x="648" y="90" width="292" height="110" rx="6" fill="#fbfbfb" stroke="#d0d7de"/>
+<text x="664" y="116" font-size="11" fill="#57606a" font-weight="600" letter-spacing="0.5">BILLABLE EXCL. CACHE READS</text>
+<text x="664" y="158" font-size="32" fill="#24292f" font-weight="700">1.27B</text>
+<text x="664" y="184" font-size="12" fill="#57606a" font-weight="400">input + output + cache creation</text>
+
+<rect x="956" y="90" width="292" height="110" rx="6" fill="#fbfbfb" stroke="#d0d7de"/>
+<text x="972" y="116" font-size="11" fill="#57606a" font-weight="600" letter-spacing="0.5">REPORTED MESSAGES</text>
+<text x="972" y="158" font-size="32" fill="#24292f" font-weight="700">227,377</text>
+<text x="972" y="184" font-size="12" fill="#57606a" font-weight="400">user_03 alone has 114,422 (50.3%)</text>
+
+<!-- Panel 1: Token Category Breakdown -->
+<rect x="26" y="220" width="1228" height="280" rx="6" fill="#fbfbfb" stroke="#d0d7de"/>
+<text x="46" y="248" font-size="16" fill="#24292f" font-weight="700">Token Category Breakdown</text>
+<text x="1234" y="248" font-size="12" fill="#57606a" text-anchor="end" font-weight="400">log scale (tokens)</text>
+<text x="46" y="268" font-size="12" fill="#57606a" font-weight="400">Cache reads dominate the cohort by ~322× over output tokens; non-cache traffic is only 0.4% of all tokens</text>
+
+<!-- Log axis grid lines and labels -->
+<line x1="176.00" y1="284" x2="176.00" y2="458" stroke="#d8dee4" stroke-width="1"/>
+<text x="176.00" y="478" font-size="11" fill="#57606a" text-anchor="middle">10M</text>
+<line x1="416.50" y1="284" x2="416.50" y2="458" stroke="#d8dee4" stroke-width="1"/>
+<text x="416.50" y="478" font-size="11" fill="#57606a" text-anchor="middle">100M</text>
+<line x1="657.00" y1="284" x2="657.00" y2="458" stroke="#d8dee4" stroke-width="1"/>
+<text x="657.00" y="478" font-size="11" fill="#57606a" text-anchor="middle">1B</text>
+<line x1="897.50" y1="284" x2="897.50" y2="458" stroke="#d8dee4" stroke-width="1"/>
+<text x="897.50" y="478" font-size="11" fill="#57606a" text-anchor="middle">10B</text>
+<line x1="1138.00" y1="284" x2="1138.00" y2="458" stroke="#d8dee4" stroke-width="1"/>
+<text x="1138.00" y="478" font-size="11" fill="#57606a" text-anchor="middle">100B</text>
+<line x1="176.00" y1="458" x2="1138.00" y2="458" stroke="#6e7781" stroke-width="1"/>
+
+<!-- Bars (sorted largest to smallest), height 28, gap 14 -->
+<text x="158" y="306" font-size="13" fill="#24292f" text-anchor="end" font-weight="700">cache_read</text>
+<rect x="176" y="292" width="831.90" height="28" rx="3" fill="#2f6f7e"/>
+<text x="1015.90" y="311" font-size="11" fill="#24292f" font-weight="600">28.78B</text>
+<text x="1075" y="311" font-size="11" fill="#57606a">95.8%</text>
+
+<text x="158" y="348" font-size="13" fill="#24292f" text-anchor="end" font-weight="700">cache_creation</text>
+<rect x="176" y="334" width="495.93" height="28" rx="3" fill="#6f42c1"/>
+<text x="679.93" y="353" font-size="11" fill="#24292f" font-weight="600">1.15B</text>
+<text x="730" y="353" font-size="11" fill="#57606a">3.8%</text>
+
+<text x="158" y="390" font-size="13" fill="#24292f" text-anchor="end" font-weight="700">output</text>
+<rect x="176" y="376" width="228.63" height="28" rx="3" fill="#1f883d"/>
+<text x="412.63" y="395" font-size="11" fill="#24292f" font-weight="600">89.3M</text>
+<text x="458" y="395" font-size="11" fill="#57606a">0.3%</text>
+
+<text x="158" y="432" font-size="13" fill="#24292f" text-anchor="end" font-weight="700">input</text>
+<rect x="176" y="418" width="93.12" height="28" rx="3" fill="#0969da"/>
+<text x="277.12" y="437" font-size="11" fill="#24292f" font-weight="600">24.4M</text>
+<text x="320" y="437" font-size="11" fill="#57606a">0.1%</text>
+
+<!-- Panel 2: Top Users by All Tokens -->
+<rect x="26" y="520" width="1228" height="320" rx="6" fill="#fbfbfb" stroke="#d0d7de"/>
+<text x="46" y="548" font-size="16" fill="#24292f" font-weight="700">Top Users by All Tokens</text>
+<text x="1234" y="548" font-size="12" fill="#57606a" text-anchor="end" font-weight="400">tokens (incl. cache reads)</text>
+<text x="46" y="568" font-size="12" fill="#57606a" font-weight="400">Top 5 users account for 80.1% of all tokens; user_09 and user_10 generated billions of tokens with zero reported messages</text>
+
+<!-- Linear axis 0 to 7B -->
+<line x1="176.00" y1="586" x2="176.00" y2="804" stroke="#d8dee4" stroke-width="1"/>
+<text x="176.00" y="824" font-size="11" fill="#57606a" text-anchor="middle">0</text>
+<line x1="313.43" y1="586" x2="313.43" y2="804" stroke="#d8dee4" stroke-width="1"/>
+<text x="313.43" y="824" font-size="11" fill="#57606a" text-anchor="middle">1B</text>
+<line x1="450.86" y1="586" x2="450.86" y2="804" stroke="#d8dee4" stroke-width="1"/>
+<text x="450.86" y="824" font-size="11" fill="#57606a" text-anchor="middle">2B</text>
+<line x1="588.29" y1="586" x2="588.29" y2="804" stroke="#d8dee4" stroke-width="1"/>
+<text x="588.29" y="824" font-size="11" fill="#57606a" text-anchor="middle">3B</text>
+<line x1="725.71" y1="586" x2="725.71" y2="804" stroke="#d8dee4" stroke-width="1"/>
+<text x="725.71" y="824" font-size="11" fill="#57606a" text-anchor="middle">4B</text>
+<line x1="863.14" y1="586" x2="863.14" y2="804" stroke="#d8dee4" stroke-width="1"/>
+<text x="863.14" y="824" font-size="11" fill="#57606a" text-anchor="middle">5B</text>
+<line x1="1000.57" y1="586" x2="1000.57" y2="804" stroke="#d8dee4" stroke-width="1"/>
+<text x="1000.57" y="824" font-size="11" fill="#57606a" text-anchor="middle">6B</text>
+<line x1="1138.00" y1="586" x2="1138.00" y2="804" stroke="#d8dee4" stroke-width="1"/>
+<text x="1138.00" y="824" font-size="11" fill="#57606a" text-anchor="middle">7B</text>
+<line x1="176.00" y1="804" x2="1138.00" y2="804" stroke="#6e7781" stroke-width="1"/>
+
+<!-- Bars: height 32, gap 8, start y=596 -->
+<text x="158" y="616" font-size="13" fill="#24292f" text-anchor="end" font-weight="700">user_03</text>
+<text x="158" y="630" font-size="10" fill="#57606a" text-anchor="end">74 days · 114,422 msgs</text>
+<rect x="176" y="596" width="830.40" height="32" rx="3" fill="#0969da"/>
+<text x="1014.40" y="616" font-size="12" fill="#24292f" font-weight="600">6.04B</text>
+<text x="1063" y="616" font-size="11" fill="#57606a">20.1%</text>
+
+<text x="158" y="656" font-size="13" fill="#24292f" text-anchor="end" font-weight="700">user_09</text>
+<text x="158" y="670" font-size="10" fill="#57606a" text-anchor="end">41 days · 0 msgs</text>
+<rect x="176" y="636" width="763.61" height="32" rx="3" fill="#218bff"/>
+<text x="947.61" y="656" font-size="12" fill="#24292f" font-weight="600">5.56B</text>
+<text x="996" y="656" font-size="11" fill="#57606a">18.5%</text>
+
+<text x="158" y="696" font-size="13" fill="#24292f" text-anchor="end" font-weight="700">user_07</text>
+<text x="158" y="710" font-size="10" fill="#57606a" text-anchor="end">37 days · 6,911 msgs</text>
+<rect x="176" y="676" width="699.61" height="32" rx="3" fill="#54aeff"/>
+<text x="883.61" y="696" font-size="12" fill="#24292f" font-weight="600">5.09B</text>
+<text x="932" y="696" font-size="11" fill="#57606a">16.9%</text>
+
+<text x="158" y="736" font-size="13" fill="#24292f" text-anchor="end" font-weight="700">user_10</text>
+<text x="158" y="750" font-size="10" fill="#57606a" text-anchor="end">44 days · 0 msgs</text>
+<rect x="176" y="716" width="663.32" height="32" rx="3" fill="#80ccff"/>
+<text x="847.32" y="736" font-size="12" fill="#24292f" font-weight="600">4.83B</text>
+<text x="896" y="736" font-size="11" fill="#57606a">16.1%</text>
+
+<text x="158" y="776" font-size="13" fill="#24292f" text-anchor="end" font-weight="700">user_05</text>
+<text x="158" y="790" font-size="10" fill="#57606a" text-anchor="end">32 days · 2,041 msgs</text>
+<rect x="176" y="756" width="352.66" height="32" rx="3" fill="#b6e3ff"/>
+<text x="536.66" y="776" font-size="12" fill="#24292f" font-weight="600">2.57B</text>
+<text x="582" y="776" font-size="11" fill="#57606a">8.5%</text>
+
+<!-- Panel 3: Top Users by Output Tokens -->
+<rect x="26" y="860" width="1228" height="280" rx="6" fill="#fbfbfb" stroke="#d0d7de"/>
+<text x="46" y="888" font-size="16" fill="#24292f" font-weight="700">Top Users by Output Tokens</text>
+<text x="1234" y="888" font-size="12" fill="#57606a" text-anchor="end" font-weight="400">output tokens</text>
+<text x="46" y="908" font-size="12" fill="#57606a" font-weight="400">Output ranking differs from total tokens — user_07 leads, suggesting more chat-like turns vs. heavy cached context</text>
+
+<!-- Linear axis 0 to 20M -->
+<line x1="176.00" y1="924" x2="176.00" y2="1098" stroke="#d8dee4" stroke-width="1"/>
+<text x="176.00" y="1118" font-size="11" fill="#57606a" text-anchor="middle">0</text>
+<line x1="416.50" y1="924" x2="416.50" y2="1098" stroke="#d8dee4" stroke-width="1"/>
+<text x="416.50" y="1118" font-size="11" fill="#57606a" text-anchor="middle">5M</text>
+<line x1="657.00" y1="924" x2="657.00" y2="1098" stroke="#d8dee4" stroke-width="1"/>
+<text x="657.00" y="1118" font-size="11" fill="#57606a" text-anchor="middle">10M</text>
+<line x1="897.50" y1="924" x2="897.50" y2="1098" stroke="#d8dee4" stroke-width="1"/>
+<text x="897.50" y="1118" font-size="11" fill="#57606a" text-anchor="middle">15M</text>
+<line x1="1138.00" y1="924" x2="1138.00" y2="1098" stroke="#d8dee4" stroke-width="1"/>
+<text x="1138.00" y="1118" font-size="11" fill="#57606a" text-anchor="middle">20M</text>
+<line x1="176.00" y1="1098" x2="1138.00" y2="1098" stroke="#6e7781" stroke-width="1"/>
+
+<!-- Bars: height 28, gap 8 starting y=934 -->
+<text x="158" y="952" font-size="13" fill="#24292f" text-anchor="end" font-weight="700">user_07</text>
+<rect x="176" y="934" width="914.16" height="28" rx="3" fill="#1f883d"/>
+<text x="1098.16" y="953" font-size="11" fill="#ffffff" font-weight="600" text-anchor="end">19.0M</text>
+<text x="1102" y="953" font-size="11" fill="#57606a">21.3%</text>
+
+<text x="158" y="988" font-size="13" fill="#24292f" text-anchor="end" font-weight="700">user_09</text>
+<rect x="176" y="970" width="858.74" height="28" rx="3" fill="#2da44e"/>
+<text x="1042.74" y="989" font-size="11" fill="#24292f" font-weight="600">17.9M</text>
+<text x="1086" y="989" font-size="11" fill="#57606a">20.0%</text>
+
+<text x="158" y="1024" font-size="13" fill="#24292f" text-anchor="end" font-weight="700">user_05</text>
+<rect x="176" y="1006" width="702.70" height="28" rx="3" fill="#56d364"/>
+<text x="886.70" y="1025" font-size="11" fill="#24292f" font-weight="600">14.6M</text>
+<text x="928" y="1025" font-size="11" fill="#57606a">16.4%</text>
+
+<text x="158" y="1060" font-size="13" fill="#24292f" text-anchor="end" font-weight="700">user_03</text>
+<rect x="176" y="1042" width="566.33" height="28" rx="3" fill="#85e89d"/>
+<text x="750.33" y="1061" font-size="11" fill="#24292f" font-weight="600">11.8M</text>
+<text x="792" y="1061" font-size="11" fill="#57606a">13.2%</text>
+
+<text x="158" y="1096" font-size="13" fill="#24292f" text-anchor="end" font-weight="700">user_10</text>
+<rect x="176" y="1078" width="330.16" height="28" rx="3" fill="#aff5b4"/>
+<text x="514.16" y="1097" font-size="11" fill="#24292f" font-weight="600">6.86M</text>
+<text x="556" y="1097" font-size="11" fill="#57606a">7.7%</text>
+
+<!-- Panel 4: Per-User Distribution (box plot for All tokens) -->
+<rect x="26" y="1160" width="1228" height="200" rx="6" fill="#fbfbfb" stroke="#d0d7de"/>
+<text x="46" y="1188" font-size="16" fill="#24292f" font-weight="700">Per-User Distribution — All Tokens</text>
+<text x="1234" y="1188" font-size="12" fill="#57606a" text-anchor="end" font-weight="400">tokens per user</text>
+<text x="46" y="1208" font-size="12" fill="#57606a" font-weight="400">Mean (2.31B) sits well above median (1.88B), reflecting a long-tail distribution skewed by the heaviest users</text>
+
+<!-- Linear axis 0 to 7B -->
+<line x1="176.00" y1="1224" x2="176.00" y2="1316" stroke="#d8dee4" stroke-width="1"/>
+<text x="176.00" y="1336" font-size="11" fill="#57606a" text-anchor="middle">0</text>
+<line x1="313.43" y1="1224" x2="313.43" y2="1316" stroke="#d8dee4" stroke-width="1"/>
+<text x="313.43" y="1336" font-size="11" fill="#57606a" text-anchor="middle">1B</text>
+<line x1="450.86" y1="1224" x2="450.86" y2="1316" stroke="#d8dee4" stroke-width="1"/>
+<text x="450.86" y="1336" font-size="11" fill="#57606a" text-anchor="middle">2B</text>
+<line x1="588.29" y1="1224" x2="588.29" y2="1316" stroke="#d8dee4" stroke-width="1"/>
+<text x="588.29" y="1336" font-size="11" fill="#57606a" text-anchor="middle">3B</text>
+<line x1="725.71" y1="1224" x2="725.71" y2="1316" stroke="#d8dee4" stroke-width="1"/>
+<text x="725.71" y="1336" font-size="11" fill="#57606a" text-anchor="middle">4B</text>
+<line x1="863.14" y1="1224" x2="863.14" y2="1316" stroke="#d8dee4" stroke-width="1"/>
+<text x="863.14" y="1336" font-size="11" fill="#57606a" text-anchor="middle">5B</text>
+<line x1="1000.57" y1="1224" x2="1000.57" y2="1316" stroke="#d8dee4" stroke-width="1"/>
+<text x="1000.57" y="1336" font-size="11" fill="#57606a" text-anchor="middle">6B</text>
+<line x1="1138.00" y1="1224" x2="1138.00" y2="1316" stroke="#d8dee4" stroke-width="1"/>
+<text x="1138.00" y="1336" font-size="11" fill="#57606a" text-anchor="middle">7B</text>
+<line x1="176.00" y1="1316" x2="1138.00" y2="1316" stroke="#6e7781" stroke-width="1"/>
+
+<!-- Box plot at y center = 1265, box height 36 -->
+<!-- Whisker: min (177.30) to max (1006.40) -->
+<line x1="177.30" y1="1265" x2="1006.40" y2="1265" stroke="#24292f" stroke-width="1.5"/>
+<!-- Min cap -->
+<line x1="177.30" y1="1253" x2="177.30" y2="1277" stroke="#24292f" stroke-width="1.5"/>
+<text x="177.30" y="1245" font-size="10" fill="#57606a" text-anchor="middle">min 9.4M</text>
+<!-- Max cap -->
+<line x1="1006.40" y1="1253" x2="1006.40" y2="1277" stroke="#24292f" stroke-width="1.5"/>
+<text x="1006.40" y="1245" font-size="10" fill="#57606a" text-anchor="middle">max 6.04B</text>
+<!-- Box: P25 (201.63) to P75 (839.32) -->
+<rect x="201.63" y="1247" width="637.69" height="36" rx="3" fill="#dbecff" stroke="#0969da" stroke-width="1.5"/>
+<text x="201.63" y="1303" font-size="10" fill="#0969da" text-anchor="start">P25 186.5M</text>
+<text x="839.32" y="1303" font-size="10" fill="#0969da" text-anchor="end">P75 4.83B</text>
+<!-- Median line -->
+<line x1="435.04" y1="1247" x2="435.04" y2="1283" stroke="#0969da" stroke-width="3"/>
+<text x="435.04" y="1245" font-size="10" fill="#0969da" text-anchor="middle" font-weight="700">median 1.88B</text>
+<!-- Mean dot -->
+<circle cx="493.61" cy="1265" r="5" fill="#cf222e" stroke="#ffffff" stroke-width="1.5"/>
+<text x="493.61" y="1303" font-size="10" fill="#cf222e" text-anchor="middle" font-weight="700">mean 2.31B</text>
+
+<!-- Footer -->
+<text x="32" y="1370" font-size="11" fill="#57606a">Source: token_usage_statistics.md · Generated 2026-05-08</text>
+</svg>
